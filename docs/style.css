@@ -65,7 +65,7 @@ main {
     border-top: #ecf0f2 solid 0.125rem;
     border-bottom: #ecf0f2 solid 0.125rem;
     width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: scroll;
     overflow-y: hidden;
     display: flex;
     white-space: nowrap;
