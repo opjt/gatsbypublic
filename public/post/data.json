@@ -1,0 +1,40 @@
+{
+    "posts": [
+        {
+            "id":1,
+            "date":"2021-05-02",
+            "title": "test",
+            "description": "test",
+            "category": "hello",
+            "body": "안녕하세요"
+        },
+        {
+            "id":2,
+            "date":"2021-05-02",
+            "title": "두번째 게시물입니다",
+            "description": "two 게시물",
+            "category": "잡글",
+            "body": "두번쨰게시무 ㄹ입닞다"
+        },
+        {
+            "id":3,
+            "date":"2021-04-29",
+            "title": "세번째 게시물입니다",
+            "description": "test1",
+            "category": "asd",
+            "body": "#ㅁㄴㅇㅁㄴㅂㅈㄷ"
+        },
+        {
+            "id":4,
+            "date":"2021-05-01",
+            "title": "네번째다",
+            "category": "asd",
+            "description": "test1",
+            "body": "ㅂㅈㄷ"
+        }
+    ]
+
+
+}
+
+           
