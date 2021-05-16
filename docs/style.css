@@ -31,24 +31,27 @@ main {
 }
 .post p {
     margin:0;
-    margin-top:0.5rem;
+
+    
 }
 .post-row h2 {
+    color: var(--heading-color);
     margin:0;
 }
 .post-row {
     line-height: 1.5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     align-items: baseline;
 }
 .post-row time {
-    margin-left: 1rem;
+    color: var(--light-font-color);
+    /* margin-left: 1rem; */
 }
 .title-row h1 {
     margin: 0;
-    color: var(--h1-color);
+    color: var(--heading-color);
 }
 .title-row {
     margin-bottom: 2rem;
@@ -62,14 +65,14 @@ main {
 }
 .category ul {
     
-    border-top: #ecf0f2 solid 0.125rem;
-    border-bottom: #ecf0f2 solid 0.125rem;
+    border-top: var(--blockquote) solid 0.125rem;
+    border-bottom: var(--blockquote) solid 0.125rem;
     /* width: 100%; */
     overflow-x: scroll;
     overflow-y: hidden;
     display: flex;
     white-space: nowrap;
-    background-color: #f4f7f8;
+    background-color: var(--light-background-hover);
     padding: 0.75rem 0.5rem;
     /* margin: 0.5rem 0 0 0; */
     margin: 0 0 0 0;
@@ -81,15 +84,16 @@ main {
 
 .category li {
     border-radius: 0.5rem;
-    background-color:white;
-    border: 0.125rem solid #ecf0f2;
+    background-color: var(--light-background);
+    border: 0.125rem solid var(--border);
     margin: 0 0.25rem;
 }
 .category li.active {
-    border: 2px solid #909da1;
+    border: 2px solid var(--dark-font-color);
     font-weight: bolder;
 }
 .category a {
+    color: var(--p-color);
     padding: 0 0.5rem;
     
 
@@ -107,7 +111,7 @@ ul,li {
     top: 0;
     left: 0;
     background: var(--navbar-color);
-    box-shadow: 0 3px 13px rgb(100 110 140 / 10%), 0 2px 4px rgb(100 110 140 / 15%);
+    /* box-shadow: 0 3px 13px rgb(100 110 140 / 10%), 0 2px 4px rgb(100 110 140 / 15%); */
     z-index: 2;
     padding: 0.5rem;
     /* border-bottom: 4px solid var(--light-background); */
@@ -154,7 +158,41 @@ button {
     border: none;
     background-color: inherit;
 }
+.footnav {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display:flex;
+}
+.footnav a {
+    /* width:100%; */
+    margin: .5rem 1rem;
+    border-bottom: none;
+    padding: 1.5rem;
+    border-radius: .35rem;
+    background: var(--light-background);
+    color: var(--heading-color);
+}
+
+.footnav span {
+    color: var(--transparent-text);
+    display:block;
+}
 @media screen and (min-width: 800px) {
+    .footnav {
+        margin-top: 3rem;
+        flex-wrap: nowrap;
+        display:flex;
+        flex-direction: row;
+    }
+    .footnav a {
+        flex: 0 0 calc(50% - 2rem);
+        
+    }
+    .footnav a:first-of-type {
+        text-align: right;
+    }
     .category  {
         padding-top: 0;
     }
@@ -187,12 +225,27 @@ button {
 
 }
 
-
+.tui-editor-contents p,.tui-editor-contents ul li {
+    color: var(--font-color);
+}
+.tui-editor-contents h1,.tui-editor-contents h2,.tui-editor-contents table {
+    color: var(--h1-color);
+}
+.tui-editor-contents pre code {
+    color: #222;
+}
+.tui-editor-contents blockquote {
+    background-color:var(--blockquote);
+}
+.tui-editor-contents table th, .tui-editor-contents table td {
+    border: 1px solid var(--light-background-hover)
+}
 
 
 body {
     margin: 0;
     padding: 0;    
+    background: var(--background);
 }
 a {
     color: inherit;
@@ -206,9 +259,12 @@ html {
     font-size: 1rem;
     line-height: 1.75;
 }
+
 :root {
     --color-mode: light;
+    --blockquote: #f9f9f9;
     --h1-color: #343a40;
+    --p-color: black;
     --font-color: #495057;
     --heading-color: #343a40;
     --background: white;
@@ -226,4 +282,28 @@ html {
     --transparent-text: rgba(0, 0, 0, 0.7);
     --transparent-bg: rgba(0, 0, 0, 0.05);
     --light-transparent-bg: rgba(255, 255, 255, 0.1);
+}
+:root.dark {
+    --blockquote: #252629;
+    --h1-color: white;
+    --p-color: white;
+    --font-color: #b3b9c5;
+    --heading-color: #ffd479;
+    --dark-font-color: #ced4da;
+    --background: #1f2022;
+    --medium-font-color: #dee2e6;
+    --light-font-color: #868e96;
+    --light-background: #2D2D31;
+    --light-background-hover: #3b3b3e;
+    --code-background-color: #2e2e30;
+    --border: #404040;
+    --link-color: #6ab0f3;
+    --link-color-darker: #4a72a5;
+    --link-hover-color: #e1a6f2;
+    --navbar-color: #1d1d1d;
+    --blockquote: #2b2b2b;
+    --blockquote-left: #191919;
+    --transparent-text: rgba(255, 255, 255, 0.7);
+    --transparent-bg: rgba(0, 0, 0, 0.2);
+    --light-transparent-bg: rgba(255, 255, 255, 0.05); 
 }

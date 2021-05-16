@@ -12,8 +12,9 @@
               <router-link :to="'?q=' + value.name">{{value.name}}</router-link>
             </li>
             <li><a href="">AboutMe</a></li>
-            <li><a href=""><i class="fab fa-github"></i></a></li>
-            <li><a href="">🌙</a></li>
+            <li><a href="https://github.com/opjt"><i class="fab fa-github"></i></a></li>
+            <li><button v-on:click="darkToggle">{{darkemoji}}</button></li>
+            <!-- <li><router-link :to="''" v-on:click="darkToggle(darkemoji)">{{darkemoji}}</router-link></li> -->
     
         </ul>
     </div>
@@ -48,7 +49,8 @@ export default {
   },
   data() {
     return {
-      tag: "All"
+      tag: "All",
+      darkemoji: "🌙"
     };
    },
   created() {
@@ -78,6 +80,17 @@ export default {
       return 0;
     });
     this.cate = arr;
+    
+    //☀️ 🌙
+    var modemoji;
+    const darkk = localStorage.getItem('dark');
+    
+    if(darkk == "true") {
+      modemoji = "☀️";
+    } else {
+      modemoji = "🌙";
+    }
+    this.darkemoji = modemoji;
     console.log(arr);
      
    },
@@ -87,19 +100,40 @@ export default {
       
       var tag = this.$route.query.q;
       if(typeof(this.$route.query.q) == 'undefined') {
-        console.log("없음");
+        // console.log("없음");
         return Articles.posts;
       }
       console.log("tag "  + this.tag);
       var result = Articles.posts.filter(value => value.category == tag);
-      for(var i in Articles.posts) {
-        console.log(Articles.posts[i]);
-      }
+      // for(var i in Articles.posts) {
+      //   console.log(Articles.posts[i]);
+      // }
       return result;
     }, 
     // tags() {
 
     // }
+  },
+  methods: {
+    darkToggle() {
+      
+      // console.log(event);
+      const darkk = localStorage.getItem('dark');
+      // console.log(darkk);
+      if(darkk == "true") {
+        this.darkemoji = "🌙";
+        document.documentElement.classList.remove("dark")
+        localStorage.clear();
+        
+      } else {
+        this.darkemoji = "☀️";
+        document.documentElement.classList.toggle("dark")
+        localStorage.setItem('dark', 'true');
+      }
+    
+      //☀️ 🌙
+      
+    }
   }
 }
 </script>
