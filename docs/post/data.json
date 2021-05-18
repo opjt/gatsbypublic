@@ -2,35 +2,11 @@
     "posts": [
         {
             "id":1, 
-            "date":"2021-05-02",
-            "title": "test",
-            "description": "test",
-            "category": "hello",
-            "body": "안녕하세요"
-        },
-        {
-            "id":2,
-            "date":"2021-05-02",
-            "title": "두번째 게시물입니다",
-            "description": "두번째-게시물입니다",
-            "category": "잡글",
-            "body": "두번쨰게시무 ㄹ입닞다"
-        },
-        {
-            "id":3,
-            "date":"2021-04-29",
-            "title": "세번째 게시물입니다",
-            "description": "test1",
-            "category": "asd",
-            "body": "#ㅁㄴㅇㅁㄴㅂㅈㄷ"
-        },
-        {
-            "id":4,
-            "date":"2021-05-01",
-            "title": "네번째다",
-            "category": "asd",
-            "description": "test3",
-            "body": "ㅂㅈㄷ"
+            "date":"2021-05-18",
+            "title": "Vue 새로고침시 404error 삽질",
+            "description": "historyvshash",
+            "category": "vue",
+            "body": "github page, vue"
         }
     ]
 
