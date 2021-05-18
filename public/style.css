@@ -19,6 +19,7 @@ main {
 .search-box input {
     font-size: 1.5rem;
     color: var(--light-font-colo);
+    background-color: var(--background);
     border: 0;
     width: 100%;
     outline: 0;

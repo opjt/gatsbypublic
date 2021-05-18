@@ -10,12 +10,12 @@
     <div class="footnav">
         
         <!-- <router-link v-if='(typeof(articles["prev"]) == "undefined") == false' :to="'/post/' + articles['prev'].description"> -->
-        <a v-if='(typeof(articles["prev"]) == "undefined") == false' :href="'/post/' + articles['prev'].description">
+        <a v-if='(typeof(articles["prev"]) == "undefined") == false' :href="'#/post/' + articles['prev'].description">
             <span>Previous</span>
             {{articles["prev"].title}}
         </a>      
         
-        <a v-if='(typeof(articles["next"]) == "undefined") == false' :href="'/post/' + articles['next'].description">
+        <a v-if='(typeof(articles["next"]) == "undefined") == false' :href="'#/post/' + articles['next'].description">
             <span>Next</span>
             {{articles["next"].title}}
         </a> 
