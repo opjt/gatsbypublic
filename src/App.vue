@@ -20,7 +20,7 @@ export default {
         
         if(to.path == "/") {
           document.title = "😎PJTLOG";
-        } else if(to.path == "/search") {
+        } else if(to.path == "/search" || to.path == "/search/") {
           document.title = "search | PJTLOG";
         } else {
           document.title = to.params.id + " | PJTLOG";
