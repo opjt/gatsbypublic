@@ -7,6 +7,14 @@
             "description": "historyvshash",
             "category": "vue",
             "body": "github page, vue"
+        },
+        {
+            "id":2, 
+            "date":"2021-05-19",
+            "title": "Vue 새로고침시 404error 삽질2",
+            "description": "historyvshash2",
+            "category": "vue",
+            "body": "github page, vue2"
         }
     ]
 

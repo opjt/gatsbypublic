@@ -10,12 +10,12 @@
     <div class="footnav">
         
         <!-- <router-link v-if='(typeof(articles["prev"]) == "undefined") == false' :to="'/post/' + articles['prev'].description"> -->
-        <a v-if='(typeof(articles["prev"]) == "undefined") == false' :href="'#/post/' + articles['prev'].description">
+        <a v-if='(typeof(articles["prev"]) == "undefined") == false' :href="'/post/' + articles['prev'].description">
             <span>Previous</span>
             {{articles["prev"].title}}
         </a>      
         
-        <a v-if='(typeof(articles["next"]) == "undefined") == false' :href="'#/post/' + articles['next'].description">
+        <a v-if='(typeof(articles["next"]) == "undefined") == false' :href="'/post/' + articles['next'].description">
             <span>Next</span>
             {{articles["next"].title}}
         </a> 
@@ -27,7 +27,7 @@
 
 <script>
 
-import Articles from "../../public/post/data.json";
+import Articles from "../../public/article/data.json";
 import Header from './part/header.vue'; //import header 추가
 import axios from 'axios';
 
@@ -41,14 +41,16 @@ export default {
     title: "detailpost",
     created() {
         // console.log(this.articles[0].id);
-        axios.get('/post/' + this.article[0].description + ".md").then(response => this.messages = response.data);
+        axios.get('/article/' + this.article[0].description + ".md").then(response => this.messages = response.data);
+
+         
     },
     components: {
         Header
     },
     data() {
         return {
-            messages: []
+            messages: ""
         };
     },
     computed: {
@@ -83,7 +85,7 @@ export default {
     async mounted(){
         
         
-        const response = await axios.get('/post/' + this.article[0].description + ".md");
+        const response = await axios.get('/article/' + this.article[0].description + ".md");
         var test = response.data;
         // 토스트 에디터 생성 함수
         var editor = new Viewer({

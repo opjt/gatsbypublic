@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import Articles from "../../public/post/data.json";
+import Articles from "../../public/article/data.json";
 import Header from './part/header.vue'; //import header 추가
 
 export default {

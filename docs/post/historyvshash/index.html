@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"><meta name="google-site-verification" content="azdT4FRUn6dqWk6zvtwKccBmrwGXIQmhtnXx0JsRFXk"><link rel="icon" href="/favicon.ico"><title>historyvshash | PJTLOG</title><link href="/css/app.649bcaea.css" rel="preload" as="style"><link href="/css/chunk-vendors.e3a2dd18.css" rel="preload" as="style"><link href="/js/app.d54c9392.js" rel="preload" as="script"><link href="/js/chunk-vendors.e1fb82b9.js" rel="preload" as="script"><link href="/css/chunk-vendors.e3a2dd18.css" rel="stylesheet"><link href="/css/app.649bcaea.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but blog doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app" data-v-app=""><main><nav class="navbar"><div class="container"><div class="flex"><div><a href="/" class="brand">😎PJTLOG</a></div><div class="flex"><a href="/search" class="">🔍</a></div></div></div></nav><div class="container"><div class="title-row"><h1>Vue 새로고침시 404error 삽질</h1><time>2021-05-18</time></div><div id="toastview"><div class="tui-editor-contents"><h1>gh-page ssg vue 리로드시 404 error</h1>
+<blockquote>
+<p>gh-page에 배포한 vue 정적사이트가 새로고침하면<br>
+404 error가 발생한다는걸 발견</p>
+</blockquote>
+<h2>createRouter()</h2>
+<p><a href="https://next.router.vuejs.org/guide/migration/">https://next.router.vuejs.org/guide/migration/</a></p>
+<h2>mode hash vs history ?</h2>
+<p><code data-backticks="1">hash</code> 모든 url을 hash형태로 서비스한다. URL이 변경될 때 페이지가 다시 로드 되지 않는다.</p>
+<p><code data-backticks="1">history</code> 페이지를 다시 로드하지 않고 URL을 탐색할 수 있다. SPA의 단일 페이지 클라이언트앱이기 때문에<br>
+사용자가 직접 <code data-backticks="1">http://example.com/user/id</code> 에 접속하면 404오류가 발생한다.</p>
+<ul>
+<li>현재는 hash모드로 사용중 history로 사용하면 주소에 #이 안뜨지만 따로 서버로 구축해야함</li>
+<li>하지만 hash 모드를 사용할경우 검색엔진에 표시가 안됨</li>
+</ul>
+</div></div><div class="footnav"><!----><a href="/post/historyvshash2"><span>Next</span> Vue 새로고침시 404error 삽질2</a></div></div></main></div><script src="/js/chunk-vendors.e1fb82b9.js"></script><script src="/js/app.d54c9392.js"></script></body></html>
