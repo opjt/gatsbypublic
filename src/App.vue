@@ -16,12 +16,14 @@ export default {
   watch: {
       '$route' (to) {
         // console.log(to);
-        // console.log(to.params.id);
-        document.title = to.params.id + " | PJTLOG";
+         console.log(to.path);
+        
         if(to.path == "/") {
           document.title = "😎PJTLOG";
         } else if(to.path == "/search") {
           document.title = "search | PJTLOG";
+        } else {
+          document.title = to.params.id + " | PJTLOG";
         }
 
       }
