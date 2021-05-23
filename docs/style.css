@@ -229,7 +229,7 @@ button {
 .tui-editor-contents p,.tui-editor-contents ul li {
     color: var(--font-color);
 }
-.tui-editor-contents h1,.tui-editor-contents h2,.tui-editor-contents table {
+.tui-editor-contents h1,.tui-editor-contents h2,.tui-editor-contents h3,.tui-editor-contents table {
     color: var(--h1-color);
 }
 .tui-editor-contents pre code {
